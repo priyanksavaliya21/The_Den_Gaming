@@ -1,0 +1,1379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  scroll-behavior: unset;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+p, h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+a:hover {
+  transition: all 0.4s ease 0s;
+}
+
+a:focus,
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+html, body {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #787878;
+  background: #fff;
+  font-weight: 400;
+
+}
+
+.row{
+	margin: 0 -15px;
+}
+.container{
+	padding: 0 15px;
+}
+.col, [class*=col-]{
+	padding: 0 15px;
+}
+
+.main_wrap {
+  overflow: hidden;
+}
+
+/* *********** Header css Start *********** */
+
+.header-wrap {
+  padding: 20px 0;
+}
+header{
+  background: linear-gradient(270.02deg, #18007C 0.01%, #000000 99.99%);
+  padding: 8px 0;
+}
+.header_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu_block ul{
+  display: flex;
+  align-items: center;
+}
+.menu_block ul li + li {
+  margin-left: 70px;
+}
+.menu_block ul li a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+  display: inline-block;
+  position: relative;
+}
+.menu_block ul li a:hover, .menu_block ul li a.active  {
+  color: #F6AE40;
+}
+.menu_block ul li a::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  left: 0;
+  height: 1px;
+  background: #F6AE40;
+  transition: all 0.5s ease 0s;
+}
+.menu_block ul li a.active::before, .menu_block ul li a:hover::before{
+  width: 80%;
+}
+
+.menu_hamburger_toggle{
+  display: none;
+}
+.menu_hamburger_toggle span {
+  width: 25px;
+  height: 2px;
+  margin-bottom: 4px;
+  background-color: #fff;
+  border-radius: 35px;
+  text-align: right;
+  transition: all 0.5s ease 0s;
+  margin-left: auto;
+}
+.menu_hamburger_toggle span:nth-child(1) {
+  margin-top: 5px;
+}
+.menu_hamburger_toggle span:nth-child(2) {
+  width: 18px;
+}
+.menu_hamburger_toggle span:nth-child(3) {
+  width: 11px;
+}
+.cm_overflow header .menu_hamburger_toggle span:nth-child(2) {
+  opacity: 0;
+}
+.cm_overflow header .menu_hamburger_toggle span:nth-child(1) {
+  transform: rotate(45deg) translateY(2px) translateX(5px);
+}
+.cm_overflow header .menu_hamburger_toggle span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-4px) translateX(6px);
+  width: 25px;
+}
+
+/* *********** Header css Close *********** */
+
+/************ Hero Banner Section Start ************/
+
+.hero_banner_section{
+  width: 100%;
+  min-height: 900px;
+  background-image: url(./assets/images/Banner.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/************ Hero Banner Section Close ************/
+
+/* *********** Message Section Start *********** */
+
+.message_section {
+  margin-top: 40px;
+}
+.message_block {
+  /* max-width: 1375px; */
+  margin: 0 auto;
+  padding: 80px 0;
+  background-image: url(./assets/images/message_bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.common_section_title h3 {
+  color: #7959FF;
+  font-weight: 700;
+  font-size: 44px;
+  text-align: center;
+}
+.message_block .common_section_title{
+  margin-bottom: 40px;
+}
+
+.message_desc {
+  margin-top: 30px;
+}
+.message_box {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 30px;
+  text-align: center;
+  height: 100%;
+  transition: all 0.4s ease 0s;
+}
+.message_box:hover {
+  background: #F4F1FF;
+  border-color:#3D358E;
+} 
+.message_img {
+  min-height: 162px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.message_desc h3 {
+  font-weight: 600;
+  font-size: 20px;
+  color: #190C4D;
+  margin-bottom: 10px;
+}
+.message_desc p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #787878;
+}
+/************ Message Section Close ************/
+
+/************ Products Section Start ************/
+
+.products_section {
+  padding: 95px 0 125px;
+  position: relative;
+}
+.products_block {
+  max-width: 796px;
+  margin: 40px auto 0;
+}
+.products_row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+.products_row:hover .product_content{
+    background: #F4F1FF;
+    border-color: #3D358E;
+}
+.product_content{
+  max-width: 250px;
+  max-width: 265px;
+  padding: 15px;
+  border: 1px solid transparent;
+  transition: all 0.4s ease 0s;
+  border-radius: 10px;
+}
+.product_content h3 {
+  font-weight: 600;
+  font-size: 30px;
+  color: #190C4D;
+}
+.product_content p{
+  font-weight: 400;
+  font-size: 20px;
+  color: #787878;
+  margin-bottom: 10px;
+}
+.product_content span {
+  font-weight: 400;
+  font-size: 18px;
+  color: #F6AE40;
+}
+.pc_srrow_shape {
+  position: absolute;
+  right: 310px;
+  bottom: 20px;
+}
+.product_box_1 .product_content{
+  margin-top: 60px;
+}
+.product_box_2{
+  align-items: center;
+  margin-top: 40px;
+}
+.product_box_2 .product_content{
+  margin-right: 20px;
+}
+.product_box_2 .pc_srrow_shape{
+  right: 300px;
+  bottom: 15px;
+}
+.product_box_3 {
+  margin-top: 70px;
+}
+.product_box_3 .product_content{
+  margin-top: 20px;
+}
+.product_box_3 .pc_srrow_shape{
+  right: 290px;
+  bottom: 10px;
+}
+.product_shape_left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.product_shape_right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*********** Products Section Close *********** */
+
+
+/*********** Sign Up Section Start *********** */
+.sign_wrap{
+  background-image: url(./assets/images/sgin_up_bg.png);
+  padding: 80px 0;
+}
+.sign_block{
+  text-align: center;
+}
+.sign_title p{
+  font-size: 44px;
+  font-weight: bold;
+  color: #190C4D;
+  line-height: 1.2;
+}
+.sign_title p span{
+  color: #7959FF;
+}
+
+.sign_email_block{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: center;
+}
+.sign_email_btn .join_our_team{
+  margin: 0 0 0 30px;
+}
+.sign_email_btn .join_our_team button span{
+  padding: 17px 85px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.sign_email_btn .join_our_team button::before{
+  background: #f9f9f9;
+}
+.sign_email_btn .join_our_team button::after{
+  background: #f9f9f9;
+}
+.sign_email_sec::after{
+  width: 100%;
+}
+.sign_email_sec input{
+  position: relative;
+  font-weight: 400;
+  font-size: 20px;
+  color: #263238;
+  position: relative;
+  border: double 2px transparent;
+  border-radius: 4px;
+  background-origin: border-box;
+  transition: all 0.5s ease 0s;
+  padding: 15px 40px;
+  min-width: 550px;
+}
+.sign_email_sec input:focus{
+  outline: none;
+}
+.sign_email_sec {
+  background: linear-gradient(130deg, #FFA6FA 21.43%, #FFA6FA 50.63%, #3C79D4 100%, #3C79D4 117.04%);
+  padding: 2px;
+  display: inline-block;
+  border-radius: 5px;
+  position: relative;
+}
+.sign_email_sec:after {
+  border-bottom: 2px solid #3C79D5;
+  background: #f9f9f9;
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  right: -9.3px;
+  width: 45px;
+  height: 30px;
+  transform: rotate(151deg);
+}
+.sign_email_sec::before {
+  border-top: 2px solid #FFA6FA;
+  background: #f9f9f9;
+  content: "";
+  position: absolute;
+  top: -18.1px;
+  left: -8px;
+  width: 45px;
+  height: 30px;
+  transform: rotate(156deg);
+  z-index: 1;
+}
+.errorfor_singup {
+  position: absolute;
+  color: #f48453;
+  font-size: 14px;
+  left: 2px;
+  bottom: -25px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.errorfor_Contactus {
+  color: #f48453;
+  font-size: 11px;
+  left: 20px;
+  bottom: -18px;
+  font-weight: 600;
+  position: absolute;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+/*********** Sign Up Section Close *********** */
+
+
+/*********** FooterSection Start *********** */
+
+footer {
+  width: 100%;
+  background: linear-gradient(270.02deg, #18007C 0.01%, #000000 99.99%);
+  padding: 40px 0 15px;
+}
+.footer_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+}
+.footer_menu ul{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.footer_menu ul li{
+  margin-right: 36px;
+}
+.footer_menu ul li:last-child {
+  margin-right: 0;
+}
+.footer_menu ul li a{
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+.footer_menu ul li a:hover{
+  color: #F6AE40;;
+}
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.copyright p, .copyright p a{
+  font-weight: 300;
+  font-size: 18px;
+  color: rgb(255 255 255 / 80%);
+}
+.copyright p a:hover {
+  color: #F6AE40;;
+}
+.footer_social ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.footer_social ul li + li {
+  margin-left: 20px;
+}
+.footer_social ul li a {
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+}
+.footer_social ul li a:hover{
+  transform: translateY(-5px);
+}
+/*********** FooterSection Close *********** */
+
+/*********** Product Page Close ************/
+
+.product_page_content .products_section{
+  padding-top: 135px;
+}
+
+.common_inner_banner {
+  width: 100%;
+  min-height: 350px;
+  background-image: url(./assets/images/inner_page_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.common_inner_banner::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+.common_inner_banner ul{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.common_inner_banner ul li {
+  position: relative;
+  font-weight: 700;
+  font-size: 44px;
+  color: #FFFFFF;
+  margin-right: 35px;
+}
+.common_inner_banner ul li:last-child{
+  margin-right: 0;
+}
+.common_inner_banner ul li:last-child::after{
+  display: none;
+}
+.common_inner_banner ul li::after {
+  content: '/';
+  position: absolute;
+  right: -26px;
+  top: 0;
+  font-size: 44px;
+  color: #FFFFFF;
+}
+.common_inner_banner ul li a {
+  font-weight: 700;
+  font-size: 44px;
+  color: #FFFFFF;
+}
+.common_inner_banner ul li a:hover{
+  color: #F6AE40;
+}
+
+/*********** Product Page Close ************/
+
+/*********** Team Page Start ************/
+
+.team_user_section {
+  padding: 120px 0;
+  position: relative;
+}
+.team_user_section::before {
+  content: '';
+  background-image: url(./assets/images/team_bg.png);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -96px;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+} 
+.team_user_section .row {
+  justify-content: center;
+}
+.team_user_section .row>*{
+  margin-bottom: 30px;
+}
+.team_box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.team_img img {
+  width: 100%;
+}
+.team_overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgb(24 0 124 / 80%);
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: all 0.7s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+}
+.team_box:hover .team_overlay{
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.team_label p{
+  font-weight: 400;
+  font-size: 16px;
+  color: #F6AE40;
+}
+.team_name h3 {
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+  margin: 8px 0 10px;
+}
+.team_social ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team_social ul li + li {
+  margin-left: 12px;
+}
+.team_social ul li a svg path{
+  transition: all 0.4s ease 0s;
+}
+.team_social ul li a:hover svg path{
+  fill: #fff;
+}
+.join_our_team{
+  margin-top: 10px;
+  text-align: center;
+}
+.join_our_team button {
+  display: inline-block;
+  width: 250px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  border: double 2px transparent;
+  border-radius: 4px;
+  background-image: linear-gradient(-280deg, #FFA6FA 47.49%, #3C79D5 98.81%);
+  background-origin: border-box;
+  transition: all 0.5s ease 0s;
+}
+.join_our_team button:hover{
+  transform: translateY(-5px);
+}
+.join_our_team button::before {
+  border-top: 2px solid #FFA6FA;
+  background: #fff;
+  content: "";
+  position: absolute;
+  top: -19px;
+  left: -9px;
+  width: 45px;
+  height: 30px;
+  transform: rotate(155deg);
+  z-index: 1;
+}
+.join_our_team button:after {
+  border-bottom: 2px solid #3C79D5;
+  background: #fff;
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  right: -11px;
+  width: 45px;
+  height: 30px;
+  transform: rotate(150deg);
+}
+.join_our_team button span {
+  background: linear-gradient(280deg, #CCA2FD 21.43%, #8C77E4 50.63%, #94EFFF 100%, #8062FF 117.04%);
+  padding: 17px 36px;
+  display: inline-block;
+  border-radius: 1px;
+  width: 100%;
+
+}
+.join_our_team button svg {
+  margin-left: 10px;
+}
+
+/*********** Team Page Close ************/
+
+#error_page {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: calc(100vh - 276px);
+}
+
+
+/*********** Contact Page Start ************/
+.contect_wrapper{
+  position: relative;
+  padding: 120px 0;
+}
+.contect_wrapp{
+  max-width: 870px;
+  margin: auto;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding:50px 20px;
+  z-index: 1;
+  position: relative;
+}
+.contect_block{
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+.contect_block li{
+  width: 50%;
+  padding: 0 15px;
+  position: relative;
+}
+.contect_block li label{
+  display: block;
+}
+.contect_block li label p, .contect_textarea label p{
+  font-weight: 300;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 6px;
+}
+.contect_block li input, .contect_textarea label textarea{
+  width: 100%;
+  padding: 8px 20px;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+.contect_block li input:focus, .contect_textarea textarea:focus{
+  outline: none;
+  border: 1px solid #190C4D;
+}
+.contect_block li input::placeholder, .contect_textarea textarea::placeholder{
+  font-weight: 400;
+  font-size: 18px;
+  color: #B1B1B1;
+}
+.contect_block + .contect_block {
+  margin-top: 20px;
+}
+.contect_textarea{
+  padding: 0 15px;
+}
+.contect_textarea label{
+  display: block;
+  width: 100%;
+}
+.contect_textarea textarea{
+  width: 100%;
+  height: 120px;
+  resize: none;
+}
+.contact_btn .join_our_team{
+  margin-top: 30px;
+}
+.contact_btn .join_our_team a span {
+  background: linear-gradient(280deg, #CCA2FD 21.43%, #8C77E4 50.63%, #94EFFF 100%, #8062FF 117.04%);
+  padding: 17px 70px;
+  display: inline-block;
+  border-radius: 1px;
+}
+.contact_shape_left{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.contact_shape_right{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+/*********** Contact Page Close ************/
+
+/*********** Thanks Page Start ************/
+.thanks_wrap{
+  max-width: 770px;
+  text-align: center;
+}
+.thanks_conten h3{
+  font-weight: 700;
+  font-size: 44px;  
+  color: #7959FF;
+  margin-top: 20px;
+}
+.thanks_conten p{
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  margin-top: 5px;
+}
+.thanks_icon ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+.thanks_icon ul li + li{
+  margin-left: 21px;
+}
+.thanks_icon ul li a img{
+  transition: all 0.4s ease 0s;
+}
+.thanks_icon ul li a:hover img{
+  transform: translateY(-5px);
+}
+/*********** Thanks Page Close ************/
+ 
+
+
+
+
+
+
+
+
+/*======================================================
+================== Rsponsive CSS Start ==================
+=====================================================*/
+
+
+@media (min-width:1200px){
+  .container{
+    max-width: 1200px;
+  }
+}
+
+
+@media (max-width:1600px){
+  .hero_banner_section{
+    min-height: 750px;
+  }
+}
+
+@media (max-width:1440px){
+  .hero_banner_section {
+    min-height: 665px;
+  }
+  .product_shape_right {
+    right: -8%; 
+  }
+  .product_shape_left {
+    left: -10%; 
+  }
+
+  .contact_shape_right {
+      right: -10%;
+  }
+  .contact_shape_left {
+      left: -10%;
+  }
+}
+@media (max-width:1280px){
+  .product_shape_right {
+    right: -16%; 
+  }
+  .product_shape_left {
+    left: -18%; 
+  }
+
+  .contact_shape_right {
+      right: -18%;
+  }
+  .contact_shape_left {
+      left: -18%;
+  }
+}
+@media (max-width:1199px){
+  .hero_banner_section {
+    min-height: 555px;
+  }
+  .message_block .row>* {
+    margin-bottom: 30px;
+  }
+  .product_shape_right {
+    right: -28%; 
+  }
+  .product_shape_left {
+    left: -32%; 
+  }
+
+  .contact_shape_right {
+      right: -25%;
+  }
+  .contact_shape_left {
+      left: -25%;
+  }
+}
+@media (max-width:991px){
+  .hero_banner_section {
+    min-height: 465px;
+  }
+  .menu_block ul li + li {
+    margin-left: 30px;
+  }
+  .product_shape_right {
+    right: -41%;
+  }
+  .product_shape_left {
+    left: -42%;
+  }
+  .pc_srrow_shape{
+    max-width: 140px;
+  }
+  .product_image img {
+    max-width: 240px;
+  }
+  .product_box_2 .pc_srrow_shape {
+      right: 285px;
+      bottom: 15px;
+  }
+  .product_box_1 .pc_srrow_shape {
+    max-width: 150px;
+    right: 280px;
+  }
+  .product_box_3 .pc_srrow_shape {
+    max-width: 160px;
+    right: 270px;
+  }
+  .product_box_3 .pc_srrow_shape img {
+    display: block;
+
+  }
+
+
+  .products_section {
+      padding: 95px 0 75px;
+  }
+  .sign_title p{
+    font-size: 36px;
+  }
+  .sign_email_sec input {
+    padding: 10px 40px;
+    min-width: 440px;
+  }
+  .sign_email_btn .join_our_team button span {
+      padding: 13px 85px;
+  }
+  .sign_wrap {
+      padding: 60px 0;
+  }
+
+  .contact_shape_right {
+    right: -32%;
+  }
+  .contact_shape_left {
+    left: -32%;
+  }
+
+
+}
+@media (max-width:767px){
+  .cm_overflow, .cm_overflow body {
+    overflow: hidden;
+    touch-action: none;
+  }
+  .menu_hamburger_toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    position: relative;
+    z-index: 110;
+  }
+  /* .logo_hold{
+    position: relative;
+    z-index: 110;
+  } */
+  .logo_hold img {
+    max-width: 90px;
+  }
+  .menu_block {
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270.02deg, #18007C 0.01%, #000000 99.99%);
+    z-index: 100;
+    padding: 15px;
+    opacity: 0;
+    visibility: hidden;
+    justify-content: space-between;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu_block ul {
+    flex-direction: column;
+    text-align: center;
+}
+  .cm_overflow .menu_block{
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+  }
+  .menu_block ul li{
+    width: 100%;
+  }
+  .menu_block ul li + li {
+    margin-left: 0;
+    margin-top: 25px;
+  }
+  .menu_block ul li a{
+    color: #fff;
+  }
+  .menu_block ul li a:hover{
+    color: #fff;
+    opacity: 0.7;
+  }
+  .menu_block ul li a::before {
+    margin: 0 auto;
+    right: 0;
+  }
+  .hero_banner_section {
+    min-height: 360px;
+  }
+  .common_section_title h3{
+    font-size: 35px;
+  }
+  .message_block{
+    padding: 60px 0 30px;
+  }
+  .pc_srrow_shape, .product_shape_left, .product_shape_right {
+    display: none;
+  }
+  .products_row {
+    justify-content: center;
+    text-align: center;
+    flex-flow: column;
+  }
+  .product_box_1 .product_content {
+    margin-top: 0;
+  }
+  .product_image {
+    max-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+    order: -1;
+    padding-bottom: 40px;
+    position: relative;
+  }
+  .product_content, .product_box_2 .product_content  {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .products_row::before, .products_row::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    min-height: 160px;
+    top: 40px;
+    background-repeat: no-repeat;
+  
+  }
+  .products_row::before {
+    left: -15px;
+    background-image: url(./assets/images/pro_mobile_shape_left.svg);
+  }
+  .products_row::after{
+    right: -15px;
+    background-image: url(./assets/images/pro_mobile_shape_right.svg);
+  }
+  .products_section .container {
+    max-width: 100%;
+  }
+  .products_section {
+    padding: 10px 0 35px;
+  }
+  .products_block{
+    margin-top: 30px;
+  }
+  .product_box_3, .product_box_2 {
+    margin-top: 30px;
+  }
+  .product_image::after {
+    content: '';
+    position: absolute;
+    bottom: -41px;
+    right: 8px;
+    width: 95px;
+    height: 95px;
+    background-image: url(./assets/images/mobile_arrow_line.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .product_box_2 .product_image::after {
+    bottom: -10px;
+    right: 21px;
+  }
+  .product_box_3 .product_content {
+    margin-top: 0;
+  }
+  .product_box_3 .product_image::after{
+    right: 25px;
+  }
+  footer {
+    padding: 20px 0;
+  } 
+  .footer_block {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .footer_logo {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  .footer_logo img {
+    max-width: 92px;
+  }
+  .copyright {
+    flex-flow: column;
+  }
+  .product_page_content .products_section {
+    padding-top: 60px;
+  }
+  .common_inner_banner {
+    min-height: 250px;
+  } 
+  .team_user_section {
+    padding: 60px 0 35px;
+  }
+  #error_page {
+    min-height: calc(100vh - 301px);
+    padding: 0;
+  } 
+
+
+  .sign_title p {
+      font-size: 30px;
+  }
+  .sign_email_block{
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .sign_email_btn .join_our_team {
+      margin: 30px 0 0 0;
+  }
+  .footer_menu ul li {
+      margin-right: 32px;
+  }
+  .contect_block{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .contect_block li {
+      width: 100%;
+  }
+  .contect_block + .contect_block {
+      margin-top: 15px;
+  }
+  .contect_block li + li{
+    margin-top: 15px;
+  }
+  .contect_wrapp {
+    border-radius: 20px;
+      padding: 25px 10px;
+  }
+  .contact_shape_right {
+    right: -42%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .contact_shape_left {
+      left: -42%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .contect_wrapper {
+      padding: 80px 0;
+  }
+
+  .thanks_conten h3 {
+      font-size: 32px;
+  }
+  .thanks_conten p {
+    font-size: 19px;
+  }
+  .thanks_icon ul {
+    margin-top: 30px;
+  }
+
+}
+@media (max-width:575px){
+  .hero_banner_section {
+    min-height: 300px;
+  }
+  header {
+    padding: 5px 0;
+  }
+  .logo_hold img {
+    max-width: 70px;
+  }
+  .message_section{
+    margin-top: 0;
+  }
+  .message_block{
+    background-image: url(./assets/images/mobile_message_bg.png);
+    background-position: top center;
+  }
+  .message_block .container, .team_user_section .container{
+    max-width: 80%;
+  }
+  .message_block .row>* {
+    margin-bottom: 20px;
+  }
+  .message_box {
+    padding: 30px 31px;
+}
+  .message_block .row>*:last-child .message_desc p{
+    max-width: 183px;
+    margin: 0 auto;
+  }
+  .message_block .common_section_title {
+      margin-bottom: 30px;
+  }
+  .common_section_title h3, .common_inner_banner ul li a, .common_inner_banner ul li, .common_inner_banner ul li::after {
+      font-size: 28px;
+  }
+  .footer_menu ul li a, .copyright p, .copyright p a {
+    font-size: 14px;
+  }
+  .footer_menu ul li{
+    margin-right: 26px;
+  }
+  .copyright p{
+    margin-bottom: 10px;
+  }
+  .common_inner_banner ul li{
+    margin-right: 30px;
+  }
+  .common_inner_banner ul li::after{
+    right: -20px;
+  }
+  .common_inner_banner {
+    min-height: 200px;
+  }
+  .team_user_section::before {
+    display: none;
+  }
+  .team_user_section{
+    padding-bottom: 0;
+  }
+  #error_page {
+    min-height: calc(100vh - 286px);
+  } 
+  .join_our_team{
+    margin-bottom: 35px;
+  }
+  .join_our_team a {
+    font-size: 16px;
+  }
+  .join_our_team a span{
+    padding: 15px 30px;
+  }
+  .join_our_team a svg{
+    max-width: 25px;
+  }
+
+  .sign_wrap {
+      padding: 45px 0;
+  }
+  .sign_title p {
+      font-size: 25px;
+  }
+  .sign_email_sec input {
+    min-width: 100%;
+  }
+  .contect_wrapper {
+      padding: 50px 0;
+  }
+  .contect_wrapp {
+      padding: 25px 20px;
+  }
+  .contact_shape_right {
+      right: -62%;
+  }
+  .contact_shape_left {
+      left: -62%;
+  }
+  .thanks_conten h3 {
+      font-size: 26px;
+  }
+  .thanks_conten p {
+      font-size: 16px;
+  }
+}
+@media (max-width:450px){
+  .hero_banner_section {
+    min-height: 250px;
+  }
+  .product_image{
+    max-width: 240px;
+  }
+  .product_image::after {
+    bottom: -31px;
+    right: 2px;
+    width: 80px;
+    height: 80px;
+  }
+  .product_box_2 .product_image::after {
+    bottom: 1px;
+    right: 15px;
+  }
+  .product_box_3 .product_image::after {
+    right: 15px;
+    bottom: -34px;
+    width: 85px;
+    height: 85px;
+  }
+  .common_inner_banner {
+    min-height: 215px;
+    background-image: url(./assets/images/Banner.png);
+  }
+  .sign_title p {
+      font-size: 18px;
+  }
+  .sign_email_sec input {
+      min-width: 100%;
+      width: 100%;
+  }
+  .sign_email_btn .join_our_team button span {
+      padding: 10px 70px;
+  }
+  .footer_menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+}
+@media (max-width:400px){
+  .hero_banner_section {
+    min-height: 180px;
+  }
+  .common_inner_banner {
+    min-height: 176px;
+  }
+}
+@media (max-width:367px){
+  .message_box {
+    padding: 30px 20px;
+  }
+  .message_block .container{
+    max-width: 90%;
+  }
+  .footer_menu ul li {
+    margin-right: 18px;
+  }
+
+  .contact_shape_left {
+      left: -92%;
+  }
+  .contact_shape_right {
+      right: -92%;
+  }
+}
+
